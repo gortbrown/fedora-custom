@@ -13,7 +13,11 @@ RELEASE="$(rpm -E %fedora)"
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm-ostree install screen
+rpm-ostree install screen vlc wireguard-tools cargo rustup gcc g++ alsa-lib-devel fontconfig-devel wayland-devel libxkbcommon-x11-devel openssl-devel libzstd-devel vulkan-loader
+flatpak install mullvadbrowser flatseal librewolf
+
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # this would install a package from rpmfusion
 #RUN rpm-ostree install vlc
